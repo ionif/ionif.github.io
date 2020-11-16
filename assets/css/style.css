@@ -222,13 +222,13 @@ nav ul li a {
 # Hero
 --------------------------------------------------------------*/
 #hero {
-  background-color: lightblue;
-  height: 40vh;
+  background-color: cornflowerblue;
+  height: 20vh;
   width: 100%;
 }
 
 #hero .hero-content {
-  height: 45vh;
+  height: 25vh;
   text-align: left;
   width: 60%;
   display: flex;
@@ -250,7 +250,7 @@ nav ul li a {
   font-size: 13px;
   letter-spacing: 3px;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   /*text-transform: capitalize;*/
   color: #fff;
   font-weight: 500;
