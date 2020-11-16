@@ -222,7 +222,7 @@ nav ul li a {
 # Hero
 --------------------------------------------------------------*/
 #hero {
-  background: url("../img/img.jpg") repeat scroll center center/cover;
+  background-color: lightblue;
   height: 40vh;
   width: 100%;
 }
