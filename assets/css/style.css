@@ -228,7 +228,7 @@ nav ul li a {
 }
 
 #hero .hero-content {
-  height: 25vh;
+  height: auto;
   text-align: left;
   width: 60%;
   padding-top: 30px;
