@@ -223,7 +223,7 @@ nav ul li a {
 --------------------------------------------------------------*/
 #hero {
   background-color: cornflowerblue;
-  height: 20vh;
+  height: auto;
   width: 100%;
 }
 
@@ -231,8 +231,6 @@ nav ul li a {
   height: 25vh;
   text-align: left;
   width: 60%;
-  padding-top: 30px;
-  height: auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
