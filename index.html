@@ -1,273 +1,101 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>ale x)</title>
+  
+  <meta name="description" content="Alex's website">
+  <meta name="author" content="Alex Ionkov">
+  <meta name="keywords" content="Ionkov, Alex, Alexander">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Alex Ionkov</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
-
-  <link href="assets/img/fav.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i" rel="stylesheet">
-
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/hover/hover.min.css" rel="stylesheet">
-  <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-  <link href="assets/css/style.css" rel="stylesheet">
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BKBXJ8J9KS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BKBXJ8J9KS');
-</script>
-
+  <link rel="stylesheet" href="styles.css">
 </head>
+<style>
+.left {
+  width: 64%;
+}
+
+.right {
+  width: 20%;
+}
+
+.column {
+  float: left;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
 
 <body>
+<div id="main_container">
 
-  <!-- ======= Hero Section ======= -->
-  <div id="hero" class="home">
-    <div class="container">
-      <div class="hero-content">
-        <h2>I want to change the world</h2>
-        <p>Alexander Ionkov | Junior @ UW Madison</p>
-        <ul class="list-unstyled list-social">
-          <li><a href="https://twitter.com/i0nif"><i class="ion-social-twitter"></i></a></li>
-          <li><a href="https://github.com/ionif/"><i class="ion-social-github"></i></a></li>
-          <li><p>alex@ionkov.net</p></li>
-        </ul>
-      </div>
-    </div>
-  </div><!-- End Hero -->
+<h1>I want to change the world.</h1>
+<h3> My name is Alex Ionkov.</h3>
+<p>I am a third year Computer Science student at the University of Wisconsin Madison. My research interests include human computer interaction (HCI), augmented and virtual reality (AR/VR), and user interface/user experience (UI/UX). I am extremely passionate about innovative interaction design. In the past, I worked as a Student Developer at the Kodi Foundation for Google Summer of Code 2020 and as a undergraduate in the UW Graphics Group. I have also worked on RNA sequencing projects at the Morgridge Institute for Research under John Steill and at Los Alamos National Laboratory on parameter fitting optimizations for cell signaling models under William Hlavacek and Ryan Suderman. </p> <p>For more information, see my <a href="resume.pdf">[CV]</a>, <a href="https://scholar.google.com/citations?user=tT9X2QMAAAAJ&hl=en">[Google Scholar]</a>, or <a href="https://github.com/ionif">[Github]</a>.</p>
+<h3>Current projects: </h3>
+<!--row-->
+<div class="row">
+  <!--left-->
+  <div class="column left">
+    <p> I designed and built the <a href="https://vision.ionkov.tech/">Vision Smartphone Passthrough Glasses</a>, a 3D printed wearable Google Cardboard style glasses for use with smartphone. Currently compatible with WebXR (WebVR), Aframe, Google Cardboard. Fits the iPhone 11, X or any phone of similar dimension (~5.95" by ~2.95" by ~0.35"). I am currently using Google Mediapipe and Tensorflow for the hand tracking computer vision and Three.js for rendering. The goal is to create essentially a cheap Hololens using just a smartphone, a 3D printed part, and computer vision. The website is at <a href="https://vision.ionkov.tech">vision.ionkov.tech</a> and the Github repo is <a href="https://github.com/ionif/visionglasses">here.</a></p>
+    <p> I post regular updates to my Twitter <a href="https://twitter.com/i0nif" tarsget="_blank">@i0nif</a>.</p>
+  </div>
+  <!--right-->
+  <div class="column right">
+    <img src="assets/img/dragndrop.gif" loading="lazy" alt="vision demo">
+  </div>
+</div>
 
-    <!-- ======= Portfolio Section ======= -->
-    <div id="portfolio" class="text-center paddsection">
-      <div class="container">
-        <div class="section-title text-center">
-        <p>I am a third year Computer Science student at the University of Wisconsin Madison. My research interests include human computer interaction (HCI), augmented and virtual reality (AR/VR), and user interface/user experience (UI/UX). I am extremely passionate about innovative interaction design. In the past, I worked as a Student Developer at the Kodi Foundation for Google Summer of Code 2020 and as a undergraduate in the UW Graphics Group. I have also worked on RNA sequencing projects at the Morgridge Institute for Research under John Steill and at Los Alamos National Laboratory on parameter fitting optimizations for cell signaling models under William Hlavacek and Ryan Suderman. For more information, see my <a href="resume.pdf">[CV]</a>, <a href="https://scholar.google.com/citations?user=tT9X2QMAAAAJ&hl=en">[Google Scholar]</a>, or <a href="https://github.com/ionif">[Github]</a>.
-        </div>
-      </div>
+<!--row-->
+<div class="row">
+  <!--left-->
+  <div class="column left">
+    <p>I was accepted to Google Summer of Code @ Kodi(XBMC). My mentor, Razzee, and I spent the summer writing a new web interface for Kodi in Elm called elm-chorus. Elm-chorus supports live playback and organization of media over web sockets using the JSON-RPC API. The Github repo is <a href="https://github.com/xbmc/elm-chorus">here.</a></p>
+  </div>
+  <!--right-->
+  <div class="column right">
+    <img src="assets/img/demo.gif" loading="lazy" alt="vision demo">
+  </div>
+</div>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-sm">
-            <div class="github-widget" data-repo="ionif/visionglasses"></div>
-          </div>
-          <div class="col-sm">
-            <div class="github-widget" data-repo="xbmc/elm-chorus"></div>
-          </div>
-        </div>
-        <br><br><br>
-      </div>
+<h3>more projects: </h3>
+<ul>
+  <li><div class="row">
+  <!--left-->
+  <div class="column left">
+    <p><a href="https://github.com/ionif/posenetToThreejs">posenetToThreejs</a>: I connected Tensorflow.js Posenet to a Three.js Humanoid Model using SocketIO. The pose keypoints are then mapped to the humanoid rig so that you can control it with your body. 2020.</p>
+  </div>
+  <!--right-->
+  <div class="column right">
+    <img src="assets/img/posenet.gif" loading="lazy" alt="vision demo">
+  </div>
+</div></li>
+  <li><p><a href="assets/js/grtown.html">GraphicsTown</a>: CS559 Computer Graphics Final project. I used Three.js to create a bustling island town with a trolley that travels on a spline.</p></li>
+  <li><p><a href="https://github.com/ionif/Transpos">Transpos</a>: Transpos is an app written for iOS in Swift which would recognize an image and display a respective 3D model over them. My friend Jas and I made it using Firebase to map images to 3D models and ARKit for the augmented reality aspect. 2019.</p></li>
+  <li><p><a href="https://github.com/lanl/PyBNF">PysBioNetFit</a>: Collaborated in a three-person team that developed an application for fitting models to experimental data in C++ and in Python. Wrote parts of custom syntax parser in Python for BNGL language. Created graphical user interface for PyBioNetFit in PyQt 5.</p></li>
+  <li><p><a href="assets/ige.pdf">IgE Receptor Signaling</a>: My partner and I studied the allergy signal cascade by characterizing the IgE receptor in a mast cell. I wrote a computational model in BioNetGen simulating the interacting subunits which was used to predict certain rate constants and fit it to experimental data with BioNetFit. Qualified for ISEF 2016 in Phoenix, 2017 in Los Angeles.</p></li>
+  <li><p><a href="braille.html">Refreshable Braille Display</a>: A single character braille display was created using memory wire which would pull or release pins based on input from an Arduino. 2015.</p></li>
+  <li><p><a href="assets/ht.pdf">Headtracking: controlling your computer with your head</a>: Using the Wiimote, and safety glasses with infrared
+LEDs, you could control your mouse pointer by moving your head and tilting it. 2013.</p></li>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
+</ul>
+<h2>publications: </h2>
+<ul>
+  <li><span>Eshan D. Mitra, Ryan Suderman, Joshua Colvin, <b>Alexander Ionkov</b>, Andrew Hu, Herbert M. Sauro, Richard G. Posner, William S. Hlavacek, PyBioNetFit and the Biological Property Specification Language, iScience, Volume 19, 2019, Pages 1012-1036, ISSN 2589-0042, https://doi.org/10.1016/j.isci.2019.08.045.</span></li><br>
+  <li><span>Hlavacek, W. S., Csicsery-Ronay, J. A., Baker, L. R., Álamo, M. D. C. R., <b>Ionkov, A.</b>, Mitra, E. D., ... & Thomas, B. R. (2019). A step-by-step guide to using BioNetFit. In Modeling Biomolecular Site Dynamics (pp. 391-419). Humana Press, New York, NY.</span></li><br>
+  <li><span>Mitra, E., Suderman, R., <b>Ionkov, A.</b>, Hlavacek, W., & National Institutes of Health. (2018). PyBioNetFit. Los Alamos National Lab.(LANL), Los Alamos, NM (United States).</span></li>
+</ul>
+<h2>other places to find me: </h2>
+<ul>
+  <li><a href="https://twitter.com/i0nif" target="_blank">Twitter</a></li>
+  <li><a href="http://github.com/ionif" target="_blank">GitHub</a></li>
+  <li><a href="http://www.linkedin.com/in/aionkov" target="_blank">LinkedIn</a></li>
+</ul>
 
-            <div class="portfolio-list">
-
-              <ul class="nav list-unstyled" id="portfolio-flters">
-                <li class="filter filter-active" data-filter=".all">All Projects</li>
-                <li class="filter" data-filter=".ar">AR</li>
-                <li class="filter" data-filter=".bio">Bioinformatics</li>
-                <li class="filter" data-filter=".cg">Computer Graphics</li>
-                <li class="filter" data-filter=".hci">HCI</li>
-                <li class="filter" data-filter=".ios">iOS</li>
-              </ul>
-
-            </div>
-            <div class="portfolio-container">
-              <div class="col-lg-4 col-md-6 portfolio-thumbnail all hci ar cg">
-                <a class="popup-img" href="https://vision.ionkov.tech/">
-                  <img src="assets/img/demo.jpg" alt="img">
-                  <div class="journal-txt">
-
-                  <h4><a href="https://vision.ionkov.tech/">Vision Smartphone Passthrough Glasses</a></h4>
-                  <p class="separator">Designed 3D printed wearable Google Cardboard style glasses for use with smartphone. Currently compatible with WebXR (WebVR), Aframe, Google Cardboard. Fits the iPhone 11, X or any phone of similar dimension (~5.95" by ~2.95" by ~0.35").
-                  </p>
-
-                </div>
-                </a>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-thumbnail all hci ar cg">
-                <a class="popup-img" href="https://twitter.com/i0nif/status/1341474229519220736?s=20">
-                  <div class="row">
-                      <img src="assets/img/dragndrop.gif" alt="img">
-                  </div>
-                  <div class="journal-txt">
-
-                  <h4><a href="https://twitter.com/i0nif/status/1341474229519220736?s=20">Drag and drop with Mediapipe and Three.js on iPhone w/ Vision Glasses</a></h4>
-                  <p class="separator">Implemented basic augmented reality drag and drop in Three.js using Google Mediapipe Hands and only an iPhone with my 3D printed glasses.
-                  </p>
-
-                </div>
-                </a>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-thumbnail all hci cg">
-                <a class="popup-img" href="https://github.com/ionif/posenetToThreejs">
-                  <img src="assets/img/posenet.gif" alt="img">
-                  <div class="journal-txt">
-
-                  <h4><a href="https://github.com/ionif/posenetToThreejs">posenetToThreejs</a></h4>
-                  <p class="separator">Controlling Three.js 3D model over websockets with Tensorflow.js Posenet and SocketIO
-                  </p>
-
-                </div>
-                </a>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-thumbnail all cg">
-                <a class="popup-img" href="assets/js/grtown.html">
-                  <img src="assets/img/town.png" alt="img">
-                  <div class="journal-txt">
-
-                  <h4><a href="assets/js/grtown.html">GraphicsTown</a></h4>
-                  <p class="separator">Computer Graphics Final project, used Three.js
-                  </p>
-
-                </div>
-                </a>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-thumbnail all ar ios">
-                <a class="popup-img" href="transpos.html">
-                  <img src="assets/img/transpos.gif" alt="img">
-                  <div class="journal-txt">
-
-                  <h4><a href="transpos.html">Transpos</a></h4>
-                  <p class="separator">Transpos is an app written for iOS in Swift which would recognize images and display a 3D model over them.
-                  </p>
-
-                </div>
-                </a>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-thumbnail all bio">
-                <a class="popup-img" href="pybnfgui.html">
-                  <img src="assets/img/bio.png" alt="img">
-                  <div class="journal-txt">
-
-                  <h4><a href="pybnfgui.html">PyBioNetFit GUI</a></h4>
-                  <p class="separator">At Los Alamos National Laboratory, I mainly worked on debugging BioNetFit2 and developing PyBioNetFit and the graphical user interface.
-                  </p>
-
-                </div>
-                </a>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-thumbnail all bio">
-                <a class="popup-img" href="ige.html">
-                  <img src="assets/img/ige.png" alt="img">
-                  <div class="journal-txt">
-
-                  <h4><a href="ige.html">IgE Receptor Signaling</a></h4>
-                  <p class="separator">Computational model simulating IgE receptor signaling
-                  </p>
-
-                </div>
-                </a>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-thumbnail all hci">
-                <a class="popup-img" href="braille.html">
-                  <img src="assets/img/braille.jpg" alt="img">
-                  <div class="journal-txt">
-
-                  <h4><a href="braille.html">Braille Display</a></h4>
-                  <p class="separator">Single character braille display was created using memory wire which would pull or release pins based on input from an Arduino.
-                  </p>
-
-                </div>
-                </a>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-thumbnail all hci">
-                <a class="popup-img" href="ht.html">
-                  <img src="assets/img/ht.jpeg" alt="img">
-                  <div class="journal-txt">
-
-                  <h4><a href="http://ht.ionkov.net">Headtracking using Wiimote</a></h4>
-                  <p class="separator">Controlling your computer with your head.
-                  </p>
-
-                </div>
-                </a>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- End Portfolio Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <div id="contact" class="paddsection">
-      <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-                <h3>Publications:</h3>
-            </div>
-            <div class="col-md-6">
-              <ul>
-                  <li><span>Eshan D. Mitra, Ryan Suderman, Joshua Colvin, <b>Alexander Ionkov</b>, Andrew Hu, Herbert M. Sauro, Richard G. Posner, William S. Hlavacek, PyBioNetFit and the Biological Property Specification Language, iScience, Volume 19, 2019, Pages 1012-1036, ISSN 2589-0042, https://doi.org/10.1016/j.isci.2019.08.045.</span></li><br>
-                  <li><span>Hlavacek, W. S., Csicsery-Ronay, J. A., Baker, L. R., Álamo, M. D. C. R., <b>Ionkov, A.</b>, Mitra, E. D., ... & Thomas, B. R. (2019). A step-by-step guide to using BioNetFit. In Modeling Biomolecular Site Dynamics (pp. 391-419). Humana Press, New York, NY.</span></li><br>
-                  <li><span>Mitra, E., Suderman, R., <b>Ionkov, A.</b>, Hlavacek, W., & National Institutes of Health. (2018). PyBioNetFit. Los Alamos National Lab.(LANL), Los Alamos, NM (United States).</span></li>
-                </ul>
-            </div>
-          </div>
-        </div>
-    </div><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-    <!-- ======= Footer ======= -->
-  <div id="footer" class="text-center">
-    <div class="container">
-      <div class="socials-media text-center">
-
-        <ul class="list-unstyled list-social">
-          <li><a href="https://www.facebook.com/aionkov/"><i class="ion-social-facebook"></i></a></li>
-          <li><a href="https://twitter.com/i0nif"><i class="ion-social-twitter"></i></a></li>
-          <li><a href="https://github.com/ionif/"><i class="ion-social-github"></i></a></li>
-          <li><p>alex@ionkov.net</p></li>
-        </ul>
-
-      </div>
-
-      <p>&copy; Copyright Alexander Ionkov. All rights reserved.</p>
-
-      
-
-    </div>
-  </div><!-- End Footer -->
-
-  <script type="text/javascript" src="GithubRepoWidget.min.js"></script>
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/typed/typed.js"></script>
-  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-
-  <script src="assets/js/main.js"></script>
-
+</div>
 </body>
-
 </html>

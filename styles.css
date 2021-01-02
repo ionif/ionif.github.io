@@ -1,0 +1,57 @@
+body {
+  color: #404040;
+  background-color: lightblue;
+  font-family:"Courier New";
+  font-size: 1em;
+  line-height:120%;
+  margin-top:5px;
+  margin-bottom:10px;
+}
+
+h1 {
+  color: darkblue;
+  font-family: Helvetica;
+  margin-top: 50px;
+  margin-bottom:0px;
+  line-height:120%
+}
+
+h2, h3 {
+  color: #404040;
+  font-family: "Courier New";
+}
+
+a:link {
+  color: white
+}
+
+a:visited {
+  color: darkblue
+}
+
+li {
+  line-height: 120%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+#sign {
+  line-height:120%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.content {
+  visibility: hidden;
+  height: 0;
+}
+
+@media screen and (min-width:800px) {
+  #main_container {
+    width: 800px;
+    margin:0 auto;a
+    font-size:0.80em;
+  }
+}
