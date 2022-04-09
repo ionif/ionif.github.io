@@ -1,15 +1,15 @@
 body {
-  color: #404040;
-  background-color: lightblue;
+  color: #c0c0c0;
+  background-color: rgb(46, 46, 46);
   font-family:"Courier New";
   font-size: 1em;
   line-height:120%;
-  margin-top:5px;
+  margin-top:10px;
   margin-bottom:10px;
 }
 
 h1 {
-  color: darkblue;
+  color: rgb(145, 145, 145);
   font-family: Helvetica;
   margin-top: 50px;
   margin-bottom:0px;
@@ -17,16 +17,16 @@ h1 {
 }
 
 h2, h3 {
-  color: #404040;
-  font-family: "Courier New";
+  color: #6d6d6d;
+  font-family: "Helvetica";
 }
 
 a:link {
-  color: darkblue
+  color: rgb(141, 141, 141)
 }
 
 a:visited {
-  color: darkblue
+  color: rgb(126, 126, 126)
 }
 
 li {
@@ -51,7 +51,38 @@ li {
 @media screen and (min-width:800px) {
   #main_container {
     width: 800px;
-    margin:0 auto;a
+    margin:0 auto;
     font-size:0.80em;
+  }
+  .left {
+    width: 64%;
+  }
+  
+  .right {
+    width: 20%;
+  }
+  
+  .column {
+    float: left;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@media screen and (max-width:799px) {
+  #main_container {
+    margin: auto;
+    width: 70%;
+    font-size:0.80em;
+  }
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
   }
 }

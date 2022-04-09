@@ -18,40 +18,38 @@
   gtag('js', new Date());
 
   gtag('config', 'G-BKBXJ8J9KS');
+
+  function toggle(id) {
+  a = document.getElementById('toggle_'+id);
+  b = document.getElementById('display_'+id);
+    if (a.style.display=='block') {
+      a.style.display='none';
+      b.innerHTML='About >';
+    }
+    else {
+      a.style.display='block';
+      b.innerHTML='About ^';
+  }
+}
 </script>
-
-<style>
-.left {
-  width: 64%;
-}
-
-.right {
-  width: 20%;
-}
-
-.column {
-  float: left;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-</style>
 
 <body>
 <div id="main_container">
 
-<h1>I want to change the world.</h1>
-<h3> My name is Alex Ionkov.</h3>
-<p>I am a third year Computer Science student at the University of Wisconsin Madison. My research interests include human computer interaction (HCI), augmented and virtual reality (AR/VR), and user interface/user experience (UI/UX). I am extremely passionate about innovative interaction design. In the past, I worked as a Student Developer at the Kodi Foundation for Google Summer of Code 2020 and as a undergraduate in the UW Graphics Group. I have also worked on RNA sequencing projects at the Morgridge Institute for Research under John Steill and at Los Alamos National Laboratory on parameter fitting optimizations for cell signaling models under William Hlavacek and Ryan Suderman. </p> <p>For more information, see my <a href="resume.pdf">[CV]</a>, <a href="https://scholar.google.com/citations?user=tT9X2QMAAAAJ&hl=en">[Google Scholar]</a>, or <a href="https://github.com/ionif">[Github]</a>.</p>
-<h3>Current projects: </h3>
+  <h4> My name is Alex Ionkov. &nbsp;&nbsp;&nbsp;
+    <a href="https://twitter.com/i0nif" target="_blank">Twitter</a>
+    <a href="http://github.com/ionif" target="_blank">GitHub</a>
+    <a href="http://www.linkedin.com/in/aionkov" target="_blank">LinkedIn</a>
+  </h4>
+  <a id="display_3234" href="javascript:toggle('3234');">About ></a> 
+<div id="toggle_3234" style="display: none">I am a Software Engineer. My interests include human computer interaction (HCI), augmented and virtual reality (AR/VR), and user interface/user experience (UI/UX). I am extremely passionate about innovative interaction design. In the past, I worked as a Student Developer at the Kodi Foundation for Google Summer of Code 2020 and as a undergraduate in the UW Graphics Group. I have also worked on RNA sequencing projects at the Morgridge Institute for Research under John Steill and at Los Alamos National Laboratory on parameter fitting optimizations for cell signaling models under William Hlavacek and Ryan Suderman. </p> <p>For more information, see my <a href="resume.pdf">[CV]</a>, <a href="https://scholar.google.com/citations?user=tT9X2QMAAAAJ&hl=en">[Google Scholar]</a>, or <a href="https://github.com/ionif">[Github]</a>.</div>
 <!--row-->
 <div class="row">
   <!--left-->
   <div class="column left">
-    <p> I designed and built the <a href="https://vision.ionkov.tech/">Vision Smartphone Passthrough Glasses</a>, a 3D printed wearable Google Cardboard style glasses for use with smartphone. Currently compatible with WebXR (WebVR), Aframe, Google Cardboard. Fits the iPhone 11, X or any phone of similar dimension (~5.95" by ~2.95" by ~0.35"). I am currently using Google Mediapipe and Tensorflow for the hand tracking computer vision and Three.js for rendering. The goal is to create essentially a cheap Hololens using just a smartphone, a 3D printed part, and computer vision. The website is at <a href="https://vision.ionkov.tech">vision.ionkov.tech</a> and the Github repo is <a href="https://github.com/ionif/visionglasses">here.</a></p>
+    <h4>Vision Smartphone Passthrough Glasses</h4>
+    <p> 3D printed wearable Google Cardboard style glasses for use with smartphone. </p>
+    <p>Currently compatible with WebXR (WebVR), Aframe, Google Cardboard. Fits the iPhone 11, X or any phone of similar dimension (~5.95" by ~2.95" by ~0.35"). I am currently using Google Mediapipe and Tensorflow for the hand tracking computer vision and Three.js for rendering. The goal is to create essentially a cheap Hololens using just a smartphone, a 3D printed part, and computer vision. The website is at <a href="ionif.github.io/vision/">ionkov.com/vision</a> and the Github repo is <a href="https://github.com/ionif/visionglasses">here.</a></p>
     <p> I post regular updates to my Twitter <a href="https://twitter.com/i0nif" tarsget="_blank">@i0nif</a>.</p>
   </div>
   <!--right-->
@@ -64,6 +62,20 @@
 <div class="row">
   <!--left-->
   <div class="column left">
+    <h4>Rigme.io</h4>
+    <p> My friend, Jas, and I created <a href="rigme.io">rigme.io</a>(now dead x/), which allowed you to take a picture of yourself with your webcam and we would send you an email back with a 3D rigged model of you. We used the PiFuHD model and Blender to do the rigging. The Github repo is <a href="https://github.com/tonightio/rigme">here.</a></p>
+  </div>
+  <!--right-->
+  <div class="column right">
+    <img src="assets/img/rigme.png" loading="lazy" alt="rigme pipeline">
+  </div>
+</div>
+
+<!--row-->
+<div class="row">
+  <!--left-->
+  <div class="column left">
+    <h4>Kodi (XBMC)</h4>
     <p>I was accepted to Google Summer of Code @ Kodi(XBMC). My mentor, Razzee, and I spent the summer writing a new web interface for Kodi in Elm called elm-chorus. Elm-chorus supports live playback and organization of media over web sockets using the JSON-RPC API. The Medium reflection I wrote is <a href="https://medium.com/@aionkov/google-summer-of-code-2020-kodi-reflection-9a3aaffab1f7">here</a> and the Github repo is <a href="https://github.com/xbmc/elm-chorus">here.</a></p>
   </div>
   <!--right-->
