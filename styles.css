@@ -1,88 +1,117 @@
+:root {
+  --bg: rgb(46, 46, 46);
+  --surface-alt: rgb(56, 56, 56);
+  --line: #5a5a5a;
+  --text: #d6d6d6;
+  --text-soft: #a8a8a8;
+  --accent: #e0e0e0;
+  --font-main: "Courier New", Courier, monospace;
+  --gap: 24px;
+  --pad: 4px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
 body {
-  color: #c0c0c0;
-  background-color: rgb(46, 46, 46);
-  font-family:"Courier New";
-  font-size: 1em;
-  line-height:120%;
-  margin-top:10px;
-  margin-bottom:10px;
+  margin: 0;
+  min-height: 100vh;
+  padding: var(--gap);
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-main);
+  font-size: 13px;
+  line-height: 1.4;
+  display: grid;
+  /* nav | centered content | empty — keeps the content column centered */
+  grid-template-columns: minmax(128px, 1fr) minmax(0, 600px) minmax(0, 1fr);
+  column-gap: calc(var(--gap) * 2);
+  align-items: start;
 }
 
-h1 {
-  color: rgb(145, 145, 145);
-  font-family: Helvetica;
-  margin-top: 50px;
-  margin-bottom:0px;
-  line-height:120%
+a, a:visited { color: var(--accent); text-underline-offset: 2px; }
+a:hover { color: #fff; }
+
+/* sidebar nav */
+.main-nav {
+  grid-column: 1;
+  justify-self: end;
+  width: 128px;
+  position: sticky;
+  top: var(--gap);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+}
+.nav-button, .nav-button:visited {
+  display: flex;
+  align-items: center;
+  min-height: 27px;
+  padding: var(--pad) 6px;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+.nav-button:last-child { border-bottom: 0; }
+.nav-button:hover { background: var(--surface-alt); color: #fff; }
+.nav-button.active { background: var(--accent); color: var(--bg); }
+
+/* main column */
+.content { grid-column: 2; max-width: 600px; min-width: 0; padding-bottom: 80px; }
+.intro { margin-bottom: 48px; }
+.intro p { margin: 0; }
+
+/* projects: media, then caption */
+.project-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.project { display: grid; gap: 12px; }
+.project p { margin: 0; color: var(--text-soft); }
+.project p > a:first-child { font-weight: 700; }
+
+.project-media {
+  display: block;
+  border: 1px solid var(--line);
+  background: rgb(36, 36, 36);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+}
+.project-media img,
+.project-media video {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
 }
 
-h2, h3 {
-  color: #6d6d6d;
-  font-family: "Helvetica";
+/* text sections */
+.text-section { margin-top: 80px; }
+.text-section h2 {
+  font-size: inherit;
+  font-weight: 700;
+  margin: 0 0 12px;
 }
+.text-section ul { margin: 0; padding-left: 18px; color: var(--text-soft); }
+.text-section li { margin-bottom: 10px; }
 
-a:link {
-  color: rgb(141, 141, 141)
-}
-
-a:visited {
-  color: rgb(126, 126, 126)
-}
-
-li {
-  line-height: 120%;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  margin-right: 0px;
-  margin-left: 0px;
-}
-
-#sign {
-  line-height:120%;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-.content {
-  visibility: hidden;
-  height: 0;
-}
-
-@media screen and (min-width:800px) {
-  #main_container {
-    width: 800px;
-    margin:0 auto;
-    font-size:0.80em;
+@media (max-width: 700px) {
+  body {
+    grid-template-columns: 1fr;
+    row-gap: calc(var(--gap) * 2);
+    padding: 16px;
   }
-  .left {
-    width: 64%;
+  .main-nav, .content { grid-column: 1; }
+  .main-nav {
+    width: auto;
+    justify-self: stretch;
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
-  
-  .right {
-    width: 20%;
-  }
-  
-  .column {
-    float: left;
-  }
-  
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-@media screen and (max-width:799px) {
-  #main_container {
-    margin: auto;
-    width: 70%;
-    font-size:0.80em;
-  }
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
+  .nav-button { flex: 1 1 auto; justify-content: center; border-bottom: 0; border-right: 1px solid var(--line); }
+  .nav-button:last-child { border-right: 0; }
+  .project-list { gap: 56px; }
 }

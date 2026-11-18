@@ -1,162 +1,125 @@
-
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
   <title>ale x)</title>
-  
   <meta name="description" content="Alex's website">
   <meta name="author" content="Alex Ionkov">
   <meta name="keywords" content="Ionkov, Alex, Alexander">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="styles.css">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKBXJ8J9KS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BKBXJ8J9KS');
+  </script>
 </head>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BKBXJ8J9KS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BKBXJ8J9KS');
-
-  function toggle(id) {
-  a = document.getElementById('toggle_'+id);
-  b = document.getElementById('display_'+id);
-    if (a.style.display=='block') {
-      a.style.display='none';
-      b.innerHTML='About >';
-    }
-    else {
-      a.style.display='block';
-      b.innerHTML='About ^';
-  }
-}
-</script>
-
 <body>
-<div id="main_container">
+  <nav class="main-nav">
+    <a href="/" class="nav-button active">home</a>
+    <a href="resume2.pdf" class="nav-button">cv</a>
+    <a href="https://github.com/ionif" target="_blank" class="nav-button">github</a>
+    <a href="https://www.linkedin.com/in/aionkov" target="_blank" class="nav-button">linkedin</a>
+    <a href="https://scholar.google.com/citations?user=tT9X2QMAAAAJ&hl=en" target="_blank" class="nav-button">scholar</a>
+    <a href="https://twitter.com/i0nif" target="_blank" class="nav-button">twitter</a>
+  </nav>
 
-  <h4>Hey there, my name is Alex! &nbsp;&nbsp;&nbsp;
-    <a href="http://github.com/ionif" target="_blank">GitHub</a>
-    <a href="http://www.linkedin.com/in/aionkov" target="_blank">LinkedIn</a>
-  </h4>
-  I love building things; I make snowboards in Denver and I have a 1973 MG Midget which I love working on (most of the time). Currently, I am a Senior Software Engineer at Alteryx. </p> <p>For more information, see my <a href="resume.pdf">[CV]</a>, <a href="https://scholar.google.com/citations?user=tT9X2QMAAAAJ&hl=en">[Google Scholar]</a>, or <a href="https://github.com/ionif">[Github]</a>
+  <main class="content">
+    <header class="intro">
+      <p>Hey there, my name is Alex! I love building things; I make snowboards in Denver and I have a
+        1973 MG Midget which I love working on (most of the time).
+        Currently, I am a Senior Software Engineer at Alteryx.</p>
+    </header>
 
-<!--row-->
-<div class="row">
-  <!--left-->
-  <div class="column left">
-    <h4>Crash Snowboards</h4>
-    <p> I share a shop in Denver, CO where we hand make skis and snowboards. No manufacturers, or investors, just grassroots snowboard building. We give away boards every year at several local jams but otherwise you can catch us at Ruby Hill! </p>
-    <a href="https://www.crashsnowboards.com/" tarsget="_blank">crashsnowboards.com</a>
-  </div>
-  <!--right-->
-  <div class="column right">
-    <img src="assets/img/crash.jpg" style="max-height: 45vh; width: auto; object-fit: contain;" loading="lazy" alt="crash snowboards">
-  </div>
-</div>
+    <ol class="project-list" aria-label="Projects">
+      <li class="project">
+        <a class="project-media" href="https://www.crashsnowboards.com/" target="_blank">
+          <img src="assets/img/crash.jpg" loading="lazy" alt="Crash Snowboards shop">
+        </a>
+        <p><a href="https://www.crashsnowboards.com/" target="_blank">Crash Snowboards</a> is a tiny snowboard
+          company/factory I run in Denver where I hand make snowboards. No manufacturers or investors, just grassroots board
+          building. We give boards away at local jams every year; otherwise catch us at Ruby Hill.</p>
+      </li>
 
-<h3>more (old) projects: </h3>
-<!--row-->
-<div class="row">
-  <!--left-->
-  <div class="column left">
-    <h4>Build A Board</h4>
-    <p> I made <a href="https://buildaboard-dun.vercel.app" tarsget="_blank">Build A Board</a>, with Typescript, react-three-fiber and Three.js; with the idea of making designing custom snowboards simpler. A lot of times before people reach out to you with custom ski or snowboard ideas, it helps for them to build their own mental image of what it will look like. In addition, the builder lets users know if their chosen topsheet and base graphics will fit properly (this is probably the most often made mistake).</p>
-  </div>
-  <!--right-->
-  <div class="column right">
-    <img src="assets/img/buildabort.png" style="max-height: 40vh; width: auto; object-fit: contain;" loading="lazy" alt="tattoo demo">
-  </div>
-</div>
+      <li class="project">
+        <a class="project-media" href="https://buildaboard-dun.vercel.app" target="_blank">
+          <img src="assets/img/buildabort.png" loading="lazy" alt="Build A Board snowboard designer">
+        </a>
+        <p><a href="https://buildaboard-dun.vercel.app" target="_blank">Build A Board</a> is a custom snowboard
+          designer built with TypeScript, react-three-fiber and Three.js. It helps people picture their board
+          before reaching out, and checks that topsheet and base graphics actually fit (the most common mistake).</p>
+      </li>
 
-<!--row-->
-<div class="row">
-  <!--left-->
-  <div class="column left">
-    <h4>Tattoo projection app</h4>
-    <p> I created <a href="https://r3f-tattoo.vercel.app" tarsget="_blank">a website</a>, with react-three-fiber, Three.js that allowed users to upload and project images onto 3D models. My motivation was to see how tattoos could wrap around different body parts and how they would look. Not long after I made this, Procreate added a very similar feature which made my stuff now obsolete :). </p>
-  </div>
-  <!--right-->
-  <div class="column right">
-    <img src="assets/img/tattoo.jpg" style="max-height: 45vh; width: auto; object-fit: contain;" loading="lazy" alt="tattoo demo">
-  </div>
-</div>
+      <li class="project">
+        <a class="project-media" href="https://r3f-tattoo.vercel.app" target="_blank">
+          <img src="assets/img/tattoo.jpg" loading="lazy" alt="Tattoo projection demo">
+        </a>
+        <p><a href="https://r3f-tattoo.vercel.app" target="_blank">Tattoo projection</a> lets you upload an
+          image and project it onto 3D body models to see how a tattoo wraps. Procreate shipped a very similar
+          feature soon after, which made mine obsolete :).</p>
+      </li>
 
-<!--row-->
-<div class="row">
-  <!--left-->
-  <div class="column left">
-    <h4>Vision Smartphone Passthrough Glasses</h4>
-    <p> 3D printed wearable Google Cardboard style glasses for use with smartphone. </p>
-    <p>Currently compatible with WebXR (WebVR), Aframe, Google Cardboard. Fits the iPhone 11, X or any phone of similar dimension (~5.95" by ~2.95" by ~0.35"). I am currently using Google Mediapipe and Tensorflow for the hand tracking computer vision and Three.js for rendering. The goal is to create essentially a cheap Hololens using just a smartphone, a 3D printed part, and computer vision. The website is at <a href="ionif.github.io/vision/">ionkov.com/vision</a> and the Github repo is <a href="https://github.com/ionif/visionglasses">here.</a></p>
-    <p> I post regular updates to my Twitter <a href="https://twitter.com/i0nif" tarsget="_blank">@i0nif</a>.</p>
-  </div>
-  <!--right-->
-  <div class="column right">
-    <img src="assets/img/dragndrop.gif" loading="lazy" alt="vision demo">
-  </div>
-</div>
+      <li class="project">
+        <a class="project-media" href="https://github.com/ionif/visionglasses" target="_blank">
+          <img src="assets/img/dragndrop.gif" loading="lazy" alt="Vision glasses hand tracking demo">
+        </a>
+        <p><a href="https://ionif.github.io/vision/" target="_blank">Vision</a> is a 3D printed, Cardboard-style
+          headset for smartphone passthrough AR, using MediaPipe and TensorFlow for hand tracking and Three.js for
+          rendering. The goal: a cheap HoloLens from a phone, a printed part and computer vision.
+          <a href="https://github.com/ionif/visionglasses" target="_blank">[repo]</a></p>
+      </li>
 
-<!--row-->
-<div class="row">
-  <!--left-->
-  <div class="column left">
-    <h4>Rigme.io</h4>
-    <p> My friend, Jas, and I created <a href="rigme.io">rigme.io</a>(now dead x/), which allowed you to take a picture of yourself with your webcam and we would send you an email back with a 3D rigged model of you. We used the PiFuHD model and Blender to do the rigging. The Github repo is <a href="https://github.com/tonightio/rigme">here.</a></p>
-  </div>
-  <!--right-->
-  <div class="column right">
-    <img src="assets/img/rigme.png" loading="lazy" alt="rigme pipeline">
-  </div>
-</div>
+      <li class="project">
+        <a class="project-media" href="https://github.com/tonightio/rigme" target="_blank">
+          <img src="assets/img/rigme.png" loading="lazy" alt="Rigme pipeline">
+        </a>
+        <p><a href="https://github.com/tonightio/rigme" target="_blank">Rigme.io</a> (now dead x/), made with my
+          friend Jas, turned a webcam photo into an emailed, rigged 3D model of you using PIFuHD and Blender.</p>
+      </li>
 
-<!--row-->
-<div class="row">
-  <!--left-->
-  <div class="column left">
-    <h4>Kodi (XBMC)</h4>
-    <p>I was accepted to Google Summer of Code 2020 @ Kodi(XBMC). My mentor, Razzee, and I spent the summer writing a new web interface for Kodi in Elm called elm-chorus. Elm-chorus supports live playback and organization of media over web sockets using the JSON-RPC API. The Medium reflection I wrote is <a href="https://medium.com/@aionkov/google-summer-of-code-2020-kodi-reflection-9a3aaffab1f7">here</a> and the Github repo is <a href="https://github.com/xbmc/elm-chorus">here.</a></p>
-  </div>
-  <!--right-->
-  <div class="column right">
-    <img src="assets/img/demo.gif" loading="lazy" alt="vision demo">
-  </div>
-</div>
+      <li class="project">
+        <a class="project-media" href="https://github.com/xbmc/elm-chorus" target="_blank">
+          <img src="assets/img/demo.gif" loading="lazy" alt="elm-chorus Kodi web interface demo">
+        </a>
+        <p><a href="https://github.com/xbmc/elm-chorus" target="_blank">elm-chorus</a> is a new Kodi web interface
+          in Elm, written during Google Summer of Code 2020 with my mentor Razzee. Live playback and media
+          organization over WebSockets via JSON-RPC.
+          <a href="https://medium.com/@aionkov/google-summer-of-code-2020-kodi-reflection-9a3aaffab1f7" target="_blank">[reflection]</a></p>
+      </li>
 
-<div class="row">
-  <!--left-->
-  <div class="column left">
-    <p><a href="https://github.com/ionif/posenetToThreejs">posenetToThreejs</a>: I connected Tensorflow.js Posenet to a Three.js Humanoid Model using SocketIO. The pose keypoints are then mapped to the humanoid rig so that you can control it with your body. 2020.</p>
-  </div>
-  <!--right-->
-  <div class="column right">
-    <img src="assets/img/posenet.gif" loading="lazy" alt="vision demo">
-  </div>
-</div>
+      <li class="project">
+        <a class="project-media" href="https://github.com/ionif/posenetToThreejs" target="_blank">
+          <img src="assets/img/posenet.gif" loading="lazy" alt="Posenet driving a Three.js humanoid">
+        </a>
+        <p><a href="https://github.com/ionif/posenetToThreejs" target="_blank">posenetToThreejs</a> connects
+          TensorFlow.js PoseNet to a Three.js humanoid over Socket.IO, so you can puppet the rig with your body. 2020.</p>
+      </li>
+    </ol>
 
-<ul>
-  <li><p><a href="https://github.com/ionif/Transpos">Transpos</a>: Transpos is an app written for iOS in Swift which would recognize an image and display a respective 3D model over them. My friend Jas and I made it using Firebase to map images to 3D models and ARKit for the augmented reality aspect. 2019.</p></li>
-  <li><p><a href="https://github.com/lanl/PyBNF">PyBioNetFit</a>: Collaborated in a three-person team that developed an application for fitting models to experimental data in C++ and in Python. Wrote parts of custom syntax parser in Python for BNGL language. Created graphical user interface for PyBioNetFit in PyQt 5.</p></li>
-  <li><p><a href="assets/ige.pdf">IgE Receptor Signaling</a>: My partner and I studied the allergy signal cascade by characterizing the IgE receptor in a mast cell. I wrote a computational model in BioNetGen simulating the interacting subunits which was used to predict certain rate constants and fit it to experimental data with BioNetFit. Qualified for ISEF 2016 in Phoenix, 2017 in Los Angeles.</p></li>
-  <li><p><a href="braille.html">Refreshable Braille Display</a>: A single character braille display was created using memory wire which would pull or release pins based on input from an Arduino. 2015.</p></li>
-  <li><p><a href="assets/ht.pdf">Headtracking: controlling your computer with your head</a>: Using the Wiimote, and safety glasses with infrared
-LEDs, you could control your mouse pointer by moving your head and tilting it. 2013.</p></li>
-  <h4><a href="3d.html">3D Modeling/Animation Work</a></h4>
-</ul>
-<h2>publications: </h2>
-<ul>
-  <li><span>Eshan D. Mitra, Ryan Suderman, Joshua Colvin, <b>Alexander Ionkov</b>, Andrew Hu, Herbert M. Sauro, Richard G. Posner, William S. Hlavacek, PyBioNetFit and the Biological Property Specification Language, iScience, Volume 19, 2019, Pages 1012-1036, ISSN 2589-0042, https://doi.org/10.1016/j.isci.2019.08.045.</span></li><br>
-  <li><span>Hlavacek, W. S., Csicsery-Ronay, J. A., Baker, L. R., Álamo, M. D. C. R., <b>Ionkov, A.</b>, Mitra, E. D., ... & Thomas, B. R. (2019). A step-by-step guide to using BioNetFit. In Modeling Biomolecular Site Dynamics (pp. 391-419). Humana Press, New York, NY.</span></li><br>
-  <li><span>Mitra, E., Suderman, R., <b>Ionkov, A.</b>, Hlavacek, W., & National Institutes of Health. (2018). PyBioNetFit. Los Alamos National Lab.(LANL), Los Alamos, NM (United States).</span></li>
-</ul>
-<h2>other places to find me: </h2>
-<ul>
-  <li><a href="https://twitter.com/i0nif" target="_blank">Twitter</a></li>
-  <li><a href="http://github.com/ionif" target="_blank">GitHub</a></li>
-  <li><a href="http://www.linkedin.com/in/aionkov" target="_blank">LinkedIn</a></li>
-</ul>
+    <section class="text-section">
+      <h2>older</h2>
+      <ul>
+        <li><a href="https://github.com/ionif/Transpos" target="_blank">Transpos</a>: iOS app in Swift that recognized images and placed matching 3D models over them, using Firebase and ARKit. With Jas, 2019.</li>
+        <li><a href="https://github.com/lanl/PyBNF" target="_blank">PyBioNetFit</a>: part of a three-person team building a model-fitting tool in C++ and Python; wrote parts of the BNGL parser and the PyQt 5 GUI.</li>
+        <li><a href="assets/ige.pdf">IgE Receptor Signaling</a>: a BioNetGen model of the mast cell allergy cascade, fit to experimental data with BioNetFit. ISEF 2016 and 2017.</li>
+        <li><a href="braille.html">Refreshable Braille Display</a>: single-character display driven by memory wire and an Arduino. 2015.</li>
+        <li><a href="assets/ht.pdf">Headtracking</a>: control your mouse with your head using a Wiimote and IR LED safety glasses. 2013.</li>
+        <li><a href="3d.html">3D modeling / animation work</a></li>
+      </ul>
+    </section>
 
-</div>
+    <section class="text-section">
+      <h2>publications</h2>
+      <ul>
+        <li>Mitra, E. D., Suderman, R., Colvin, J., <b>Ionkov, A.</b>, Hu, A., Sauro, H. M., Posner, R. G., Hlavacek, W. S. (2019). <a href="https://doi.org/10.1016/j.isci.2019.08.045" target="_blank">PyBioNetFit and the Biological Property Specification Language</a>. iScience, 19, 1012–1036.</li>
+        <li>Hlavacek, W. S., Csicsery-Ronay, J. A., Baker, L. R., Álamo, M. D. C. R., <b>Ionkov, A.</b>, Mitra, E. D., … Thomas, B. R. (2019). A step-by-step guide to using BioNetFit. In <i>Modeling Biomolecular Site Dynamics</i> (pp. 391–419). Humana Press.</li>
+        <li>Mitra, E., Suderman, R., <b>Ionkov, A.</b>, Hlavacek, W. (2018). PyBioNetFit. Los Alamos National Lab.</li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
